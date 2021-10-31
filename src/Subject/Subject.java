@@ -1,9 +1,8 @@
 package Subject;
 
 public class Subject {
-    private long subjectId;
-    private String name;
-
+    public long subjectId;
+    public String name;
     public Subject() {
     }
 
