@@ -6,7 +6,7 @@ public class Car {
     public Car(String model, int maxSpeed) {
             this.model = model;
             this.maxSpeed = maxSpeed;}
-    public Car(String model) {
+    public Car(String model) {//перегрузка конструктора
         this.model = model;
         }
         public static void main(String[] args) {
