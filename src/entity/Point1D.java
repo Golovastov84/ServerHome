@@ -12,4 +12,7 @@ public class Point1D {
     public double length() {
         return Math.abs(x);
     }
+    public void method(double value){
+        System.out.println("double " + value);
+    }//Перегрузка метода
 }

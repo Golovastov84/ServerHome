@@ -17,4 +17,13 @@ public class Point2D extends Point1D{
     public double length() {
         return Math.hypot(y, getX());
     }
+    public void method() {
+        System.out.println("without");
+    }
+    public void method(int value) {
+        System.out.println("int " + value);
+    }//Перегрузка метода
+    public static void method(String str) {
+        System.out.println("String " + str);
+    }//Перегрузка метода
 }
