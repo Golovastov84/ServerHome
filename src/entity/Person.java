@@ -1,6 +1,6 @@
 package entity;
 
-public class Person {
+public class Person extends Object{
     private int id;
     private String name = "";
     public Person(){
