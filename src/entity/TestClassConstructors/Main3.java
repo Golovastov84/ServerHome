@@ -6,6 +6,9 @@ class A3 {
     A3(String args) {
                 System.out.println("A: one argument");
     }
+
+    public void a3() {
+    }
 }
 class B3 extends A3 {
     B3() {

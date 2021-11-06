@@ -1,3 +1,4 @@
+/*
 package entity.TestClassConstructors;
 
 public class Program {
@@ -6,10 +7,11 @@ public class Program {
         sam.zzz(); //2
     }
 }
-public abstract class Cat {
+ abstract class Cat {
     abstract void eat();
     void zzz() {
         System.out.println("Sleeps whole day");
     }
 }
 class SiameseCat extends Cat {} //3
+*/
