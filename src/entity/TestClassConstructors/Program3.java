@@ -9,12 +9,12 @@ package entity.TestClassConstructors;
  abstract class B5 implements A5 { //1
     public void a5() {
         System.out.print("a");
-    }
+    } //1
     public void d5() {
         System.out.print("d");
     }
 }
- abstract class C5 extends B5 { //1
+ abstract class C5 extends B5 {
     public void b5() {
         System.out.print("b");
     }
