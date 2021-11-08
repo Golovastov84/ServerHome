@@ -25,7 +25,7 @@ public class Student2 {
     public int hashCode() {
         int result = id2;
         result = 31 * result + (name != null ? name.hashCode() : 0); // для того что бы hashCode были разными у разных
-        // объектах у id2 и у yearOfStudy. Каждое значение умножается на простое число, здесь на 31.
+        // объектов у id2 и у yearOfStudy. Каждое значение умножается на простое число, здесь на 31.
         result = 31 * result + yearOfStudy;
         return result;
         // если запись return result; заменить return 42; с удалением вышележащих
