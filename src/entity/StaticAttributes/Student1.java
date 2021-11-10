@@ -5,7 +5,7 @@ import java.util.Locale;
 public class Student1 {
     static {  // Статический блок
         faculty = "MMF"; // Передаёт статическому объекту faculty значение MMF
-        int a = 1/0; // Будет ошибка статической инициализации
+        //int a = 1/0; // Будет ошибка статической инициализации
     }
     static String faculty; // Статическое поле класса
     /*private long studentId;
