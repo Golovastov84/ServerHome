@@ -11,6 +11,7 @@ public class ClassStudy3 {
     Point3[] data = new Point3[10]; // 1 формируется массив data длиной 10 элементов с ссылкой на класс Point3
     for (int i = 0; i < data.length; i++){
         data[i] = new Point3();}// 2 Заполняется массив data элементами описанными в классе Point3
+        //data[1].append["sdsd"];
         //int[i] data = 1;}  // 2 Заполняется массив data элементами описанными в классе Point3
     printPoints(data); // 3 Вызывается метод printPoints
     }
