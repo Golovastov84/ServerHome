@@ -20,7 +20,7 @@ public enum MusicType {
     public void setRealName(String realName) {
         this.realName = realName;
     }
-    public void info() {
+    public void info() { // метод
         switch (this) {
             case JAZZ:
                 System.out.println("This is " + realName);
