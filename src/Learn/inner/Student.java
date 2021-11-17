@@ -8,8 +8,7 @@ public class Student {
     private int group;
     private String faculty;
     private Address address; // поле типа Adress
-
-    public class Address {
+    public class Address { // можно ставить любые спечификаторы видимости
     /*public class Address extends There implements Serializable {*/
         private String city;
         private String street;
@@ -39,5 +38,8 @@ public class Student {
     public Student() {} // Конструктор
     public void operation() { // Метод
         address.city = "Izhevsk";
+    }
+    public Address getAddress() {
+        return address;
     }
 }
