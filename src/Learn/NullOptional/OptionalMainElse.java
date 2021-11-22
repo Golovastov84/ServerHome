@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class OptionalMainExt {
+public class OptionalMainElse {
     public static void main(String[] args) {
         List<Order> list = new ArrayList<>(); // Создание массива
         list.add(new Order(71L, 100D)); // Заполнение массива
@@ -17,10 +17,8 @@ public class OptionalMainExt {
         OrderActionOptional action = new OrderActionOptional(); // Создание объекта
         Optional<Order> optionalOrder = action.findById(list, 23); // вызов метода findById возвращает
         // объект Order завернутый в Optional
-        /*Optional<Order> order = optionalOrder.or(()-> Optional.of(new Order(10, 5000)));
-        // метод соплаер Optional.of(new Order(10, 5000))
-        System.out.println(order.get()); // вывод объекта order*/
-        Optional<Order> orderFilter = optionalOrder.filter(o -> o.getAmount() == 210);
-        System.out.println(orderFilter.get()); // вывод объекта order
+        System.out.println(optionalOrder.orElse(new Order())); // вывод объекта order
+        System.out.println(optionalOrder.orElseGet(Order::new)); // :: оператор видимости
+        //System.out.println(optionalOrder.orElseThrow(IllegalAccessError::new)); // Выбор типа кода ошибки при null
     }
 }
