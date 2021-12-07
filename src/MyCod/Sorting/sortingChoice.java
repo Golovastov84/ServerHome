@@ -1,9 +1,15 @@
 package MyCod.Sorting;
 
+import java.util.Scanner;
+
 public class sortingChoice {
     public static void main(String[] args) {
-        int [] arr = new int [10];
-                for (int i = 0; i < 10; i++) //Создаём массив
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Укажите длину массива:");
+        int lengthArr = scanner.nextInt();
+        int [] arr = new int [lengthArr];
+        //scanner.close();
+        for (int i = 0; i < lengthArr; i++) //Создаём массив
         {
             arr[i] = (int) (Math.random()*10); // заполняем массив
             System.out.println("arr[" + i + "] = " + arr[i]);
@@ -22,7 +28,7 @@ public class sortingChoice {
                     min_i = j;
                 }
             }
-                /* Если нашелся элемент, меньший, чем на текущей позиции, меняем их местами */
+                //Если нашелся элемент, меньший, чем на текущей позиции, меняем их местами
                 if (i != min_i) {
                     int tmp = arr[i];
                     arr[i] = arr[min_i];
@@ -30,9 +36,10 @@ public class sortingChoice {
                 }
         }
         System.out.println("===================//");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < lengthArr; i++)
         {
             System.out.println("arr[" + i + "] = " + arr[i]);
         }
+        scanner.close();
     }
 }
