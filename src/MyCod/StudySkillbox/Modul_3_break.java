@@ -3,7 +3,7 @@ package MyCod.StudySkillbox;
 
 public class Modul_3_break {
     public static void main(String[] args) {
-        int soughtYear = 1785;
+        int soughtYear = 1985;
         int firstYear = 1922;
         int lastYear = 2022;
         boolean yearExists = false;
