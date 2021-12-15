@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-     Goblin goblin1 = new Goblin(3, 2.3);
+     Goblin goblin1 = new Goblin(4, 2.3);
      Goblin goblin2 = new Goblin("Vasya");
      goblin2.test1();
      Goblin1 goblin3 = new Goblin1("ВАЗ");
@@ -14,5 +14,7 @@ public class Main {
    // Car car1 = new Car("Blue", date);
     //car1.setColor("Yellow");
         System.out.printf("%1$s %2$td %2$tB %2$tY", "Сегодняшняя дата:", date);
+        System.out.println();
+        System.out.println(6 % 1);
             }
 }

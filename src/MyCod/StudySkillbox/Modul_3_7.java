@@ -23,7 +23,6 @@ public class Modul_3_7 {
                 }
                 default -> System.out.println("Не понимаю сообщения.");
             }
-
         }
     }
 }
