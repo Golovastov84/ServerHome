@@ -3,28 +3,6 @@ package MyCod.Kickstart;
 import java.util.Random;
 import java.util.Scanner;
 
-/*class Typetester {
-int printType(byte attempt) {
-    return 1;
-}
-int printType(int attempt) {
-    return 2;
-}
-int printType(float attempt) {
-    return 3;
-}
-int printType(double attempt) {
-    return 4;
-}
-int printType(char attempt) {
-    return 5;
-}
-int printType(String attempt) {
-    return 6;
-}
-
-}*/
-
 public class RandomGame {
     public static void main(String[] args) {
         while (true) {
@@ -44,7 +22,7 @@ public class RandomGame {
                 //int attempt = new Scanner(System.in).nextInt();
                 //WRONG_ANSWER
                 do {
-                    System.out.println("WRONG_ANSWER_1");
+                    //System.out.println("WRONG_ANSWER_1");
                     while (!scanner.hasNextInt()) {
                         System.out.println("WRONG_ANSWER");
                         scanner.next();
