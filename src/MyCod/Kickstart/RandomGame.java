@@ -21,14 +21,18 @@ public class RandomGame {
                 int attempt;
                 //int attempt = new Scanner(System.in).nextInt();
                 //WRONG_ANSWER
+                AddScan addScan = new AddScan(1,a,b,false);
                 do {
-                    //System.out.println("WRONG_ANSWER_1");
                     while (!scanner.hasNextInt()) {
                         System.out.println("WRONG_ANSWER");
                         scanner.next();
                     }
                     attempt = scanner.nextInt();
-                } while (attempt > b || attempt < a);
+                    addScan.setForAttempt(attempt);
+                    if(addScan.isIntervalHit()) {
+                        System.out.println("WRONG_ANSWER_1");
+                    }
+                } while (addScan.isIntervalHit());
                 if (attempt == value) {
                     System.out.println("CORRECT");
                     break;
