@@ -1,7 +1,7 @@
 package MyCod.StudySkillbox;
 
-import MyCod.StudySkillbox.core.Camera;
-import MyCod.StudySkillbox.core.Car;
+import MyCod.StudySkillbox.Сore.Camera;
+import MyCod.StudySkillbox.Сore.Car;
 
 import java.util.Scanner;
 

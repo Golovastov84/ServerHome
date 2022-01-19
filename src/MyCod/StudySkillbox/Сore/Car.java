@@ -1,4 +1,4 @@
-package MyCod.StudySkillbox.core;
+package MyCod.StudySkillbox.Сore;
 
 public class Car {
     public String number;
