@@ -1,13 +1,21 @@
 package MyCod.StudySkillbox.Modul_10.TreeSet;
 
-import java.util.Comparator;
+
+import javax.crypto.spec.PSource;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
-        Set<String> treeSet = new TreeSet<>(/*Comparator.comparing(String :: length)*/);
-       /*boolean assertTrue(treeSet.add("String Added"));*/
 
+        TreeSet<String> treeSet = new TreeSet<>();
+        treeSet.add("Aa");
+        treeSet.add("Ab");
+        treeSet.add("Iz");
+        treeSet.add("Bb");
+        treeSet.add("Iu");
+        treeSet.add("Ba");
+
+        System.out.println(treeSet.subSet("Aa", "Bb"));
     }
 }
