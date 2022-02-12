@@ -23,6 +23,8 @@ public class Main {
         }
         System.out.println(treeSet.headSet("Ab"));
         System.out.println(treeSet.tailSet("Bb"));
+        System.out.println(treeSet.toString());
+        System.out.println(treeSet);
 
     }
 }
