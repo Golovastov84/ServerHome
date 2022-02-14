@@ -3,7 +3,7 @@ package MyCod.Sorting;
 import java.util.Scanner;
 
 public class sortingChoice {
-    public static void main(String[] args) {
+    public static void main(String[] args) { // упорядочивает случайные числа в массиве от 1 до 10
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите длину массива:");
         int lengthArr = scanner.nextInt();

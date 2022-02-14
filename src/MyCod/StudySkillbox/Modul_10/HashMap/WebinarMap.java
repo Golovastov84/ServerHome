@@ -1,38 +1,37 @@
 package MyCod.StudySkillbox.Modul_10.HashMap;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class WebinarMap {
     public static void main(String[] args) {
-        Map<Client, String> map = new TreeMap<>(new ClientNameComparator()); // становиться важнее Comparable
-        map.put(new Client(3, "Alex"), "Cat");
-        map.put(new Client(1, "Sandra"), "Dog");
-        map.put(new Client(4, "Anna"), "Cat");
-        map.put(new Client(2, "CatLover"), "Cat");
-        map.keySet().forEach(c -> System.out.println(c.getName()));
-        TreeMap<Integer, Set<String>> mapSet = new TreeMap<>();
-        //Set<String> s = Set.of("1", "2", "3");
-        //mapSet.put(1, s);
-        mapSet.put(1, new TreeSet<>());
-        mapSet.get(1).add("1");
-        mapSet.put(2, new TreeSet<>());
-        mapSet.get(2).add("2");
-        System.out.println(mapSet.get(1).size());
+
+        Map<Integer, Client> clientMap = new HashMap<>(16, 1.0f);
+
+        for(int i = 0; i < 16; i++){
+            if(i % 16 == 0) {
+                continue;
+            }
+
+            clientMap.put(i, new Client(i, "Alex"));
+        }
 
 
+        System.out.println(clientMap.get(20).getName());
     }
 }
 
-class ClientNameComparator implements Comparator<Client>{ // для установки правил сортировки
+/*class Id{
     @Override
-    public int compare(Client o1, Client o2) {
-        return o1.getName().compareTo(o2.getName());
+    public int hashCode() {
+
+        return 1;
     }
-}
+}*/
 
-
-
-class Client /*implements Comparable<Client>*/{
+class Client{
     private final int id;
     private final String name;
 
@@ -51,10 +50,9 @@ class Client /*implements Comparable<Client>*/{
 
     @Override
     public int hashCode() {
-        return id;
+        /*int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;*/
+        return 1;
     }
-
-    /*public int compareTo(Client o){ // в данный момент не действует
-        return Integer.compare(id, o.id);
-    }*/
 }
