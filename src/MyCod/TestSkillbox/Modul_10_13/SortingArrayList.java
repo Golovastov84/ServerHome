@@ -46,9 +46,11 @@ public class SortingArrayList {
         Collection checkList = Collections.checkedCollection(listOfCountries, String.class);
         System.out.println(checkList);
         listOfCountries.add(10);
+        listOfCountries.add("Japan");
         //checkList.add(10); // выдаст ошибку
         System.out.println(listOfCountries);
         System.out.println(checkList);
+        System.out.println(Collections.frequency(listOfCountries, "Japan"));
 
     }
 }

@@ -23,6 +23,17 @@ public class WebinarCollection {
         Iterator<String> iterator = list.iterator(); // создание итератора (обходчика)
         while (iterator.hasNext()){ // обход с выводом всей коллекции
             System.out.println(iterator.next());
+            for(int i = 0; i < 50; i++) {
+                System.out.println(generateQueue(12));
+            }
         }
+    }
+//    public static int generateQueue(int a) {
+//        int q = (int) Math.round(Math.random() * a);
+//        return q;
+//    }
+    public static int generateQueue(int limitValue) {
+        Random randomObject = new Random();
+        return randomObject.nextInt(limitValue);
     }
 }
