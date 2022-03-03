@@ -16,6 +16,7 @@ public class RandomGame {
             System.out.println("WRONG_ANSWER");
             scannerTest.next();
         }
+        //return scannerTest.nextInt();
         return scannerTest.nextInt();
     }
 
