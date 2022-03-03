@@ -60,7 +60,7 @@ public class Bus {
                 ", consumptionRate=" + consumptionRate +
                 '}';
     }
-    // мастер 2 - 2 тур
+    // copy 1 - 3 тур
 
     public void refuel(double tankRate) {
         double total = tankFullnessRate + tankRate;
