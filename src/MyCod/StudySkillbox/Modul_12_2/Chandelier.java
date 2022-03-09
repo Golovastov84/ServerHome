@@ -22,7 +22,6 @@ public class Chandelier extends LightingDevice {
         super.setBrightness(stepsCount * step);
     }
 
-
     @Override
     public double getEnergyConsumption() {
 
