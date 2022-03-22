@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Yan",
+    "salary": 35000,
+    "workStart": "06.09.2019"
+  },
+  {
+    "name": "Fary",
+    "salary": 5000,
+    "workStart": "23.01.2017"
+  },
+  {
+    "name": "Gon",
+    "salary": 12500,
+    "workStart": "12.07.2020"
+  },
+  {
+    "name": "Gony",
+    "salary": 12600,
+    "workStart": "02.07.2020"
+  },
+  {
+    "name": "Lely",
+    "salary": 1500,
+    "workStart": "12.07.2020"
+  },
+  {
+    "name": "Greane",
+    "salary": 23500,
+    "workStart": "09.10.2012"
+  }
+]
