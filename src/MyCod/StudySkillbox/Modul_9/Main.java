@@ -1,9 +1,14 @@
 package MyCod.StudySkillbox.Modul_9;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         /*String empty = "";
         System.out.println(empty.isEmpty());
         String blank = " \t \n 3";
@@ -44,6 +49,20 @@ public class Main {
          //System.out.println(goods2);
         System.out.println(System.currentTimeMillis() - time1);
         System.out.println(goods2.length() + " символов");
-
+        /*for (int i = 64; i < 135; i++) {
+            // вывод символов по коду
+            char regexChar = (char) i;
+            String regex = Character.toString(regexChar);
+            System.out.println(i + " - " + regex);
+//            if(regex.equals("я")) {
+//                System.out.println(i + " - " + regex);
+//            }
+        }*/
+        // Чтение из файла
+        String text = "data/file.txt";
+        List<String> lines = Files.readAllLines(Paths.get(text));
+        System.out.println(lines.get(0));
+        lines.forEach(c -> System.out.println(c));
+        lines.add("By");
     }
 }
