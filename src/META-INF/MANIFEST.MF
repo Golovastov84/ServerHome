@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: MyCod.StudySkillbox.Modul_15_5.Main
+
