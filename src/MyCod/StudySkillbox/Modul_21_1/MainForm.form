@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MyCod.StudySkillbox.Modul_21_1.MainForm">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="10" vgap="5">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="d50e4" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="699d0" class="javax.swing.JButton" binding="clearButton">
+            <constraints/>
+            <properties>
+              <hideActionText value="false"/>
+              <text value="Очистить"/>
+            </properties>
+          </component>
+          <component id="5793b" class="javax.swing.JButton" binding="countButton">
+            <constraints/>
+            <properties>
+              <actionCommand value="Посчитать"/>
+              <label value="Посчитать"/>
+              <text value="Посчитать"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="ace2a" class="javax.swing.JTextArea" binding="textArea">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <vspacer id="9f52b">
+        <constraints border-constraint="East"/>
+      </vspacer>
+      <vspacer id="8db81">
+        <constraints border-constraint="West"/>
+      </vspacer>
+      <hspacer id="54df4">
+        <constraints border-constraint="North"/>
+      </hspacer>
+    </children>
+  </grid>
+</form>
