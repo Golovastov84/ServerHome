@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ServerHome:jar">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="archive" name="ServerHome.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/pom/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="ServerHome" />
+      <element id="module-output" name="pom" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/json-simple-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.18/lombok-1.18.18.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
