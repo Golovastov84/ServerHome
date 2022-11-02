@@ -1,6 +1,0 @@
-Москва 80
-/
-Windows 10 10.0
-JVM:
-2024Mb
-B:\java\Skillbox\1 modul
