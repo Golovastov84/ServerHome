@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListVotersVisits>
+    <voter name="Иванов Иван Иванович" birthDay="1963.06.07">
+        <visit station="10" time="2015.09.10 18:02:15" />
+    </voter>
+    <voter name="Иванов Иван Иванович" birthDay="1963.06.07">
+        <visit station="10" time="2015.09.10 18:02:15" />
+    </voter>
+</ListVotersVisits>

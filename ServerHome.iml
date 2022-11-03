@@ -9,6 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/MyCod/StudySkillbox/Modul_22_3/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/MyCod/StudySkillbox/Modul_22_3/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/MyCod/StudySkillbox/Modul_22_9/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/MyCod/StudySkillbox/Modul_22_9/main/resourses" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
