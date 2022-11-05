@@ -1,12 +1,11 @@
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
@@ -22,12 +21,16 @@ import java.util.List;
 public class DomGenerate {
 
     public static void main(String[] args) {
-        File file = new File(FILE_data);
-        while (file.length()/1024 < (1024 * 0.2)){
+
+        while (file.length()/1024 < (1024)){
             listVoters();
         }
 
     }
+
+    private static final  String  FILE_data = "res/data_experiment.xml";
+    static List<Post> posts = new ArrayList<Post>();
+    static File file = new File(FILE_data);
 
     private static void listVoters(){
         DocumentBuilderFactory dbf = null;
@@ -36,9 +39,9 @@ public class DomGenerate {
         try {
             dbf = DocumentBuilderFactory.newInstance();
             db = dbf.newDocumentBuilder();
-            doc = db.newDocument();
+            doc = db.parse(file);
 
-            Element e_listVotersVisits = doc.createElement("ListVotersVisits");
+            Element e_listVotersVisits = doc.getDocumentElement();
             for (int i = 0; i < 100; i++) {
                 Element e_voter = doc.createElement("voter");
                 e_voter.setAttribute("name", nameGenerate());
@@ -50,19 +53,38 @@ public class DomGenerate {
                 e_listVotersVisits.appendChild(e_voter);
                 e_voter.appendChild(e_visit);
             }
-            doc.appendChild(e_listVotersVisits);
+//            doc.appendChild(e_listVotersVisits);
 
         } catch(ParserConfigurationException e){
             e.printStackTrace();
-        } finally{
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (SAXException e) {
+            throw new RuntimeException(e);
+        } finally {
             // Сохраняем Document в XML-файл
-            if (doc != null)
-                writeDocument(doc, FILE_data);
+            Transformer transformer = null;
+            if (doc != null) {
+                try {
+                    transformer = TransformerFactory.newInstance().newTransformer();
+                } catch (TransformerConfigurationException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //DOMSource source = new DOMSource(doc);
+            Source source = new DOMSource(doc);
+            //StreamResult result = new StreamResult();
+            Result result = new StreamResult(file);
+            try {
+                transformer.transform(source, result);
+            } catch (TransformerException e) {
+                throw new RuntimeException(e);
+            }
+//                writeDocument(doc, FILE_data);
         }
     }
 
-    private static final  String  FILE_data = "res/data_experiment.xml";
-    static List<Post> posts = new ArrayList<Post>();
+
 
     private static void writeDocument(Document document, String path)
     {
