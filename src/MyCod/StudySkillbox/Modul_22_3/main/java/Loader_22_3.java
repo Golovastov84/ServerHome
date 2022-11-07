@@ -4,7 +4,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class Loader {
+public class Loader_22_3 {
     private static Logger logger;
 //    static Logger logger = Logger.getGlobal();
 //    public static final Logger logger = Logger.getLogger(Loader.class.getName());
