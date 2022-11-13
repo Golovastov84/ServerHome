@@ -5,6 +5,8 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,16 +22,21 @@ public class Loader
 
     public static void main(String[] args) throws Exception
     {
-        String fileName = "res/data-1M.xml";
+        String fileName = "res/data-1572M.xml";
         long startTimer = System.currentTimeMillis();
         long usage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-        parseFile(fileName);
+        SAXParserFactory factory = SAXParserFactory.newInstance();
+        SAXParser parser = factory.newSAXParser();
+        XMLHandler handler = new XMLHandler();
+        parser.parse(new File(fileName), handler);
+        handler.printDuplicatedVoters();
+//        parseFile(fileName);
 
         usage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory() - usage;
         System.out.println("usage: " + usage + " B");
         System.out.println((System.currentTimeMillis() - startTimer) + " ms");
         //Printing results
-        DBConnection.printVoterCounts();
+//        DBConnection.printVoterCounts();
 
 //        System.out.println("Voting station work times: ");
 //        for(Integer votingStation : voteStationWorkTimes.keySet())
@@ -75,6 +82,7 @@ public class Loader
 //            Integer count = voterCounts.get(voter);
 //            voterCounts.put(voter, count == null ? 1 : count + 1);
         }
+//        DBConnection.executeMultiInsert();
     }
 
     private static void fixWorkTimes(Document doc) throws Exception
