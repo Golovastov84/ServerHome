@@ -62,22 +62,19 @@ public class Loader
     {
         NodeList voters = doc.getElementsByTagName("voter");
         int votersCount = voters.getLength();
-        for(int i = 0; i < votersCount; i++)
-        {
+        for (int i = 0; i < votersCount; i++) {
             Node node = voters.item(i);
             NamedNodeMap attributes = node.getAttributes();
 
             String name = attributes.getNamedItem("name").getNodeValue();
-//            Date birthDay = birthDayFormat.parse(attributes.getNamedItem("birthDay").getNodeValue());
             String birthDay = attributes.getNamedItem("birthDay").getNodeValue();
-
+//            Date birthDay = birthDayFormat
+//                    .parse(attributes.getNamedItem("birthDay").getNodeValue());
             DBConnection.countVoter(name, birthDay);
-
 //            Voter voter = new Voter(name, birthDay);
 //            Integer count = voterCounts.get(voter);
 //            voterCounts.put(voter, count == null ? 1 : count + 1);
         }
-        DBConnection.executeMultiInsert();
     }
 
     private static void fixWorkTimes(Document doc) throws Exception
