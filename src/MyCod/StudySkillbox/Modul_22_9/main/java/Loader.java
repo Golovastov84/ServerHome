@@ -20,21 +20,22 @@ public class Loader
 
     public static void main(String[] args) throws Exception
     {
-        String fileName = "res/data-1572M.xml";
+        String fileName = "res/data-1M.xml";
 
 
         parseFile(fileName);
         for (int i = 0; i < 5; i++) {
         long startTimer = System.currentTimeMillis();
         long usage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-        DBConnection dbConnection = new DBConnection();
+//        DBConnection dbConnection = new DBConnection();
 
-        System.out.println(DBConnection.customSelect());
+//        System.out.println(DBConnection.customSelect());
 
             usage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory() - usage;
             System.out.println("usage: " + usage + " B");
             System.out.println((System.currentTimeMillis() - startTimer) + " ms");
         }
+        DBConnection.selectMulti();
     }
 
     private static void parseFile(String fileName) throws Exception

@@ -66,6 +66,14 @@ public class DBConnection
         }
     }
 
+    public static void selectMulti() throws SQLException{
+        String selectCount = "SELECT id, name FROM voter_count WHERE id IN(1, 2, 5)";
+        ResultSet result = DBConnection.getConnection().createStatement().executeQuery(selectCount);
+        while (result.next()){
+            System.out.println(result.getString("name"));
+        }
+    }
+
     public static void printVoterCounts() throws SQLException
     {
         String sql = "SELECT name, birthDate, `count` FROM voter_count WHERE `count` > 1";

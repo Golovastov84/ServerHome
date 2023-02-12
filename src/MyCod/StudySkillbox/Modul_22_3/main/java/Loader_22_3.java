@@ -29,7 +29,7 @@ public class Loader_22_3 {
                 }
                 for (int regionCode = Math.max(1, nameFile * shareSize); regionCode <
                         (Math.min((nameFile + 1) * shareSize, maxRegionCode)); regionCode++) {
-//              условие годка делиться без остатка
+//              условие когдка делиться без остатка
                 /*for (int regionCode = (nameFile * shareSize > 0 ? nameFile * shareSize : 1); regionCode < ((nameFile + 1) *
                         shareSize); regionCode++) {*/
 // 1 2-3 4-5 6-8
