@@ -25,18 +25,23 @@ public class Main {
                 counter++;
                 switch (counter){
                     case 1 -> {
+                        System.out.println("количество клавиш на клавиатуре int");
                         numberKeysKeyboard = Integer.parseInt(lineScanner.nextLine());
                     }
                     case 2 -> {
+                        System.out.println("индинтификаторы символов string");
                         characterIdentifiersKeys = lineScanner.nextLine();
                     }
                     case 3 -> {
+                        System.out.println("номер ряда string");
                         setsRowNumber = lineScanner.nextLine();
                     }
                     case 4 -> {
+                        System.out.println("количество символов в реферате int");
                         numberCharactersAbstract = Integer.parseInt(lineScanner.nextLine());
                     }
                     case 5 -> {
+                        System.out.println("идентификаторы символов реферата string");
                         characterIdentifiersSetOrder = lineScanner.nextLine();
                         break;
                     }

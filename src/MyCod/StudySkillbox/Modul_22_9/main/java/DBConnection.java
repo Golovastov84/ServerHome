@@ -1,3 +1,5 @@
+package MyCod.StudySkillbox.Modul_22_9.main.java;
+
 import java.sql.*;
 
 public class DBConnection

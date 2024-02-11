@@ -1,4 +1,4 @@
-package MyCod.StudySkillbox.Module_23_2;
+package MyCod.StudySkillbox.Modul_23_2;
 
 import java.util.Random;
 

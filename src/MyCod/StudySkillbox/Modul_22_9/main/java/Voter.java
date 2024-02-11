@@ -1,3 +1,5 @@
+package MyCod.StudySkillbox.Modul_22_9.main.java;
+
 public class Voter {
 
     private String name;

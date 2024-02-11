@@ -1,3 +1,5 @@
+package MyCod.StudySkillbox.Modul_22_9.main.java;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
